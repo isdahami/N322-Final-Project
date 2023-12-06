@@ -35,7 +35,7 @@ export default function HomeScreen({ navigation }) {
       }
     });
 
-    return () => unsubscribe(); // Unsubscribe when the component unmounts
+    return () => unsubscribe();
   }, []);
 
   const showAlert = (title, message) => {
