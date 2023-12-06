@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./screens/HomeScreen";
 import SignInScreen from "./screens/SignInScreen";
+import ShopScreen from "./screens/ShopScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +26,16 @@ export default function App() {
               headerShown: false,
               tabBarIcon: ({ color, size }) => (
                 <Icon name="ios-home" size={size} color={color} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Shop"
+            component={ShopScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="pricetag-outline" size={size} color={color} />
               ),
             }}
           />

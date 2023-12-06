@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
   },
+
   homeTxt: {
     fontSize: 18,
     textAlign: "center",
