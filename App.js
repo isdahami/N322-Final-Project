@@ -17,6 +17,7 @@ export default function App() {
           screenOptions={() => ({
             tabBarStyle: styles.tabBarStyle,
             tabBarLabelStyle: styles.tabLabelStyle,
+            activeTintColor: "red",
           })}
         >
           <Tab.Screen
@@ -25,7 +26,7 @@ export default function App() {
             options={{
               headerShown: false,
               tabBarIcon: ({ color, size }) => (
-                <Icon name="ios-home" size={size} color={color} />
+                <Icon name="ios-home" size={size} color="red" />
               ),
             }}
           />
@@ -35,7 +36,7 @@ export default function App() {
             options={{
               headerShown: false,
               tabBarIcon: ({ color, size }) => (
-                <Icon name="pricetag-outline" size={size} color={color} />
+                <Icon name="pricetag" size={size} color="red" />
               ),
             }}
           />
@@ -45,7 +46,7 @@ export default function App() {
             options={{
               headerShown: false,
               tabBarIcon: ({ color, size }) => (
-                <Icon name="ios-person" size={size} color={color} />
+                <Icon name="ios-person" size={size} color="red" />
               ),
             }}
           />
@@ -65,5 +66,6 @@ const styles = StyleSheet.create({
   },
   tabLabelStyle: {
     fontSize: 18,
+    color: "#000",
   },
 });
