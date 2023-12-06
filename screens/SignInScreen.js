@@ -30,8 +30,10 @@ export default function HomeScreen({ navigation }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user != null) {
         console.log("User Logged In", user);
+        setUserEmail(user.email);
       } else {
         console.log("No user is logged in");
+        setUserEmail("");
       }
     });
 
@@ -179,6 +181,9 @@ export default function HomeScreen({ navigation }) {
         </View>
         <View>
           <Text style={styles.smallHeader}>User Logout</Text>
+          {userEmail ? (
+            <Text style={styles.userInfo}>Logged in as: {userEmail}</Text>
+          ) : null}
           <Button
             style={styles.btn}
             title="Logout"
@@ -198,6 +203,15 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 30,
     backgroundColor: "#FAF9F6",
+  },
+  logo: {
+    height: 150,
+    marginBottom: 20,
+  },
+  userInfo: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 10,
   },
   header: {
     fontWeight: "bold",
